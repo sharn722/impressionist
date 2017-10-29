@@ -16,6 +16,7 @@ module ActiveRecord
 
       def create_migration_file
         migration_template 'create_impressions_table.rb', 'db/migrate/create_impressions_table.rb'
+        migration_template 'add_process_info_to_impressions.rb', 'db/migrate/add_process_info_to_impressions.rb'
       end
     end
   end

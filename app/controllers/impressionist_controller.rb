@@ -60,6 +60,8 @@ module ImpressionistController
         :session_hash => session_hash,
         :ip_address => request.remote_ip,
         :referrer => request.referer,
+        :process_id => Process.id,
+        :thread_id => Thread.current.object_id,
         :params => filter.filter(params_hash)
         )
     end
